@@ -1,225 +1,113 @@
 const caixaPrincipal = document.querySelector(".caixa-principal");
-
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
-
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
-
 const caixaResultado = document.querySelector(".caixa-resultado");
-
 const textoResultado = document.querySelector(".texto-resultado");
 
-
-
 const perguntas = [
-
     {
-
-        enunciado: "Assim que saiu da academia você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
-
+        enunciado: "Após o lançamento da nova atualização 'Endgame' do Roblox, você nota que o jogo está afetando o mundo real de maneiras inesperadas. Qual é sua reação inicial?",
         alternativas: [
-
             {
-
-                texto: "Isso é assustador!",
-
-                afirmacao: "No início ficou com medo do que essa tecnologia pode fazer. "
-
+                texto: "Isso é preocupante!",
+                afirmacao: "Você começou a ficar preocupado com o impacto do jogo no mundo real."
             },
-
             {
-
-                texto: "Isso é maravilhoso!",
-
-                afirmacao: "Quis saber como usar IA no seu dia a dia."
-
+                texto: "Isso é incrível!",
+                afirmacao: "Você achou fascinante como o jogo está interligado com a realidade."
             }
-
         ]
-
     },
-
     {
-
-        enunciado: "Com a descoberta desta tecnologia, chamada Inteligência Artificial, uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre esta tecnologia. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de IA em sala de aula. Qual atitude você toma?",
-
+        enunciado: "Com o crescente impacto da atualização 'Endgame', uma escola decide criar um projeto para entender o fenômeno. Você é designado para pesquisar sobre como o Roblox está afetando a realidade. O que você faz?",
         alternativas: [
-
             {
-
-                texto: "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
-
-                afirmacao: "Conseguiu utilizar a IA para buscar informações úteis."
-
+                texto: "Usa ferramentas de busca na internet para encontrar dados e informações sobre o impacto do Roblox no mundo real.",
+                afirmacao: "Você conseguiu compilar informações úteis para entender o impacto do Roblox."
             },
-
             {
-
-                texto: "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
-
-                afirmacao: "Sentiu mais facilidade em utilizar seus próprios recursos para escrever seu trabalho."
-
+                texto: "Baseia sua pesquisa nas conversas com colegas e nas próprias observações sobre o fenômeno.",
+                afirmacao: "Você preferiu utilizar suas próprias experiências e observações para abordar o impacto do Roblox."
             }
-
         ]
-
     },
-
     {
-
-        enunciado: "Após a elaboração do trabalho escrito, a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
-
+        enunciado: "Durante a apresentação do projeto, um debate surge sobre como a popularidade do Roblox está moldando o futuro. Como você se posiciona no debate?",
         alternativas: [
-
             {
-
-                texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
-
-                afirmacao: "Vem impulsionando a inovação na área de IA e luta para abrir novos caminhos profissionais com IA."
-
+                texto: "Defende que o Roblox está criando novas oportunidades e novas formas de interagir com a realidade.",
+                afirmacao: "Você vê o Roblox como uma inovação que está mudando a forma como interagimos com o mundo."
             },
-
             {
-
-                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
-
-                afirmacao: "Sua preocupação com as pessoas motivou a criar um grupo de estudos entre trabalhadores para discutir meios de utilização de IA de forma ética."
-
+                texto: "Preocupa-se com os riscos de uma dependência excessiva do Roblox e a possível deterioração da realidade.",
+                afirmacao: "Você está preocupado com a dependência e os possíveis danos à vida real causados pelo Roblox."
             }
-
         ]
-
     },
-
     {
-
-        enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
-
+        enunciado: "Ao final do debate, você é solicitado a criar uma imagem que representa o impacto do Roblox no mundo. Como você procede?",
         alternativas: [
-
             {
-
-                texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
-
-                afirmacao: "Notou também que muitas pessoas não sabem ainda utilizar as ferramentas tradicionais e decidiu compartilhar seus conhecimentos de design utilizando ferramentas de pintura digital para iniciantes."
-
+                texto: "Cria uma imagem usando uma ferramenta de design tradicional.",
+                afirmacao: "Você optou por criar uma imagem manualmente para expressar seu ponto de vista sobre o impacto do Roblox."
             },
-
             {
-
-                texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
-
-                afirmacao: "Acelerou o processo de criação de trabalhos utilizando geradores de imagem e agora consegue ensinar pessoas que sentem dificuldades em desenhar manualmente como utilizar também!"
-
+                texto: "Usa um gerador de imagens baseado em IA para criar a imagem.",
+                afirmacao: "Você acelerou o processo de criação usando tecnologia para ilustrar o impacto do Roblox."
             }
-
         ]
-
     },
-
     {
-
-        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda da IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz? ",
-
+        enunciado: "Você tem um projeto em grupo sobre as consequências do Roblox no mundo real. Um membro do grupo usa uma IA para gerar todo o conteúdo, resultando em um trabalho que parece genérico. O que você faz?",
         alternativas: [
-
             {
-
-                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-
-                afirmacao: "Infelizmente passou a utilizar a IA para fazer todas suas tarefas e agora se sente dependente da IA para tudo."
-
+                texto: "Aceita o trabalho gerado pela IA como está, pois é um produto da tecnologia avançada.",
+                afirmacao: "Você se tornou dependente da IA e está aceitando seus resultados sem questionar."
             },
-
             {
-
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
-
-                afirmacao: "Percebeu que toda IA reproduz orientações baseadas na empresa que programou e muito do que o chat escrevia não refletia o que pensava e por isso sabe que os textos gerados pela IA devem servir como auxílio e não resultado final. "
-
+                texto: "Revisa o trabalho gerado pela IA e adiciona suas próprias análises para garantir que o conteúdo reflita seu entendimento.",
+                afirmacao: "Você garante que o trabalho tenha uma perspectiva pessoal e crítica, complementando o conteúdo gerado pela IA."
             }
-
         ]
-
-    },
-
+    }
 ];
 
-
-
-
-
 let atual = 0;
-
 let perguntaAtual;
-
 let historiaFinal = "";
 
-
-
 function mostraPergunta() {
-
     if (atual >= perguntas.length) {
-
         mostraResultado();
-
         return;
-
     }
 
     perguntaAtual = perguntas[atual];
-
     caixaPerguntas.textContent = perguntaAtual.enunciado;
-
     caixaAlternativas.textContent = "";
-
     mostraAlternativas();
-
 }
 
-
-
-function mostraAlternativas(){
-
-    for(const alternativa of perguntaAtual.alternativas) {
-
+function mostraAlternativas() {
+    for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
-
         botaoAlternativas.textContent = alternativa.texto;
-
         botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
-
         caixaAlternativas.appendChild(botaoAlternativas);
-
     }
-
 }
-
-
 
 function respostaSelecionada(opcaoSelecionada) {
-
     const afirmacoes = opcaoSelecionada.afirmacao;
-
     historiaFinal += afirmacoes + " ";
-
     atual++;
-
     mostraPergunta();
-
 }
-
-
 
 function mostraResultado() {
-
-    caixaPerguntas.textContent = "Em 2049...";
-
+    caixaPerguntas.textContent = "Em um futuro impactado pelo Roblox...";
     textoResultado.textContent = historiaFinal;
-
     caixaAlternativas.textContent = "";
-
 }
-
-
 
 mostraPergunta();
